@@ -22,7 +22,7 @@
 
 \documentclass[margin, 11pt]{res} % Use the res.cls style, the font size can be changed to 11pt or 12pt here
 
-\usepackage[top=0.7in, bottom=0.5in, left=0.5in, right=0.5in]{geometry}
+\usepackage[top=0.4in, bottom=0.5in, left=0.4in, right=0.4in]{geometry}
 \usepackage{setspace}
 \usepackage[adobe-utopia]{mathdesign}
 \usepackage[T1]{fontenc}
@@ -34,7 +34,8 @@
 %\usepackage{helvet} % Default font is the helvetica postscript font
 %\usepackage{newcent} % To change the default font to the new century schoolbook postscript font uncomment this line and comment the one above
 \usepackage{hyperref}
-\setlength{\textwidth}{6.0in} % Text width of the document
+\usepackage{comment}
+\setlength{\textwidth}{6.2in} % Text width of the document
 
 \begin{document}
 
@@ -53,7 +54,7 @@ Austin, TX- 78751\hfill Website: \href{https://sites.google.com/site/ajiljalal}{
 %\centerline{Website: \href{https://sites.google.com/site/ajiljalal}{https://sites.google.com/site/ajiljalal}}
 
 %----------------------------------------------------------------------------------------
-
+\vspace*{-13pt}
 \begin{resume}
 
 %----------------------------------------------------------------------------------------
@@ -62,9 +63,9 @@ Austin, TX- 78751\hfill Website: \href{https://sites.google.com/site/ajiljalal}{
  
 \section{\large Education}
 {\bf University of Texas at Austin} \hfill 2016-Present\\
-{\sl Ph.D., Electrical and Computer Engineering} \hfill GPA: 4.0/4.0 \\
+{\sl M.S. and Ph.D., Electrical and Computer Engineering} \hfill GPA: 3.9/4.0 \\
 {\sl Advisor}: Prof. Alexandros G. Dimakis \\
-{\sl Interests}: Statistical Machine Learning, Information and Coding Theory, Generative Models
+{\sl Interests}: Generative Models, Statistical Machine Learning, Information and Coding Theory
 
 {\bf Indian Institute of Technology Madras} \hfill 2012-2016\\
 {\sl Bachelor of Technology (Honours) in Electrical Engineering} \hfill GPA: 9.06/10 \\
@@ -72,11 +73,12 @@ Austin, TX- 78751\hfill Website: \href{https://sites.google.com/site/ajiljalal}{
 {\sl Minor}: Systems Engineering 
 
 \section{\large Publications} 
-Ashish Bora, {\bf Ajil Jalal}, Eric Price, Alexandros G. Dimakis, ``Compressed Sensing Using Generative Models", ICML 2017, Sydney, Australia.
+Ashish Bora, {\bf Ajil Jalal}, Eric Price, Alexandros G. Dimakis. ``Compressed Sensing Using Generative Models", \href{http://proceedings.mlr.press/v70/bora17a/bora17a.pdf}{ICML 2017} , Sydney, Australia.
 
-Umang Bhaskar, {\bf Ajil Jalal}, Rahul Vaze, ``The Adwords Problem with Strict Capacity Constraints", FSTTCS 2016, Chennai, India.
+Umang Bhaskar, {\bf Ajil Jalal}, Rahul Vaze. ``The Adwords Problem with Strict Capacity Constraints", \href{http://drops.dagstuhl.de/opus/volltexte/2016/6907/pdf/lipics-vol65-fsttcs2016-complete.pdf#page=365}{FSTTCS 2016} , Chennai, India.
 
-
+\section{\large Preprints}
+A. Ilyas, {\bf A. Jalal}, E. Asteri, C. Daskalakis, and A.G. Dimakis. "The Robust Manifold Defense: Adversarial Training using Generative Models." \href{https://arxiv.org/abs/1712.09196}{arXiv:1712.09196} (2017). 
 \section{\large Professional \\ Experience} 
 {\bf Tata Institute of Fundamental Research} \hfill Mumbai, India\\
 Undergraduate Research Intern\hfill Summer 2015\\
@@ -92,35 +94,39 @@ Worked on reducing power dissipation in MIPS processors by minimising switching 
 in the processor.
 
 \section{\large Projects}
+{\bf The Robust Manifold Defense: Adv. Training Using Gen. Models}\hfill May 2017- Present\\
+{\sl UT Austin, with Andrew Ilyas, Eirini Asteri, Prof. A.G. Dimakis, and Prof. C. Daskalakis}
+\begin{itemize}\itemsep -2pt
+	\item By adding imperceptible noise to a clean image, an adversary can arbitrarily influence the prediction of a neural network on the image. We show that generative models can defend against adversarial attacks.
+	\item We search for an image in the span of a generative model that is close to an input image- this helps filter out adversarial perturbations. We also demonstrate how this idea can be used to robustify a classifier during its training.
+\end{itemize}
 
 {\bf Compressed Sensing Using Generative Models}\hfill August 2016- Present\\
-{\sl UT Austin, with Prof. Alexandros G. Dimakis and Prof. Eric Price}
-\begin{itemize}
+{\sl UT Austin, with Ashish Bora, Prof. Alexandros G. Dimakis, and Prof. Eric Price}
+\begin{itemize}\itemsep -2pt
 	\item Introduced a new approach to compressed sensing. Traditional compressed sensing tries to find a sparse solution to an under-determined system of linear equations.
 	\item Our approach is to search for an approximate solution in the span of a generative model.
 	\item Proved upper bounds on number of measurements required for recovering a solution with low $\ell_2$ error. Empirical results show that we require $10$x less measurements than the traditional LASSO algorithm.
 \end{itemize}
 
-\pagebreak
-
 {\bf The Adwords Problem with Strict Capacity Constraints} \hfill May 2015- May 2016\\
 {\sl TIFR, with Prof. Rahul Vaze and Prof. Umang Bhaskar}
 \begin{itemize}\itemsep -2pt
 	\item An adversary produces weighted jobs to a set of servers with finite capacities at discrete	time steps, and a matching must be found at each time step. Objective is to maximize the aggregate sum of jobs matched.
-	\item Designed a randomised online algorithm and proved an approximation factor of 6.
-	Designed and proved that a deterministic online algorithm achieves an approximation
-	factor of 3 for a restricted case. Also showed that a load balancing algorithm is near-optimal for a special case.
+	\item Designed and proved approximation guarantees for randomised and deterministic online algorithms. Also showed that a load balancing algorithm is near-optimal for a special case.
 	\item Proved lower bounds which show our algorithms are almost tight.
 \end{itemize}
 
+%\begin{comment}
 {\bf Text Dependent Automatic Speaker Recognition} \hfill Summer 2014\\
 {\sl Audience Communication Systems, with Murali Deshpande and Vinay N Krishnan}
 \begin{itemize}\itemsep -2pt
-	\item Implemented an adaptive Gaussian Mixture Model which can be trained to recognise a particular
-	keyphrase by a 	user. Can be used as part of a voice activated wake up feature for
-	cellphones.
-	\item Model uses approximately 10 seconds of training data per user and achieves 80\%+ accuracy.
+\item Implemented an adaptive Gaussian Mixture Model which can be trained to recognise a particular
+keyphrase by a 	user. Can be used as part of a voice activated wake up feature for
+cellphones.
+\item Model uses approximately 10 seconds of training data per user and achieves 80\%+ accuracy.
 \end{itemize}
+%\end{comment}
 
 %----------------------------------------------------------------------------------------
 %	PROFESSIONAL EXPERIENCE SECTION
@@ -146,7 +152,7 @@ in the processor.
 
 \section{\large Skills}
 {\sl Programming languages:} Python, C, C++.\\
-{\sl Libraries and Toolkits:} Tensorflow, Matlab, \LaTeX, Numpy, Scipy.
+{\sl Libraries and Toolkits:} Tensorflow, PyTorch, Matlab, \LaTeX, Numpy, Scipy.
 
 \section{\large Relevant \\ Courses}
 
@@ -155,7 +161,8 @@ in the processor.
 	Machine Learning & Information Theory \\
 	Error Control Coding & Convex Optimization Theory and Algorithms\\
 	Probability and Stochastic Processes & Approximation Algorithms \\ 
-	Theory of Computation & Adaptive Signal Processing \\
+	Randomized Algorithms & Adaptive Signal Processing \\
+	Pseudorandomness & Theory of Computation \\
 	Digital Communication Systems & Computational Methods in EE \\ 
 	Analog and Digital Signal Processing & Modern Control Theory\\
 	Network Analysis & Multivariate Data Analysis\\
@@ -165,7 +172,7 @@ in the processor.
 
 \section{Hobbies}
 {\sl Music:} Professionally trained in Tabla and completed Preliminary, First Year and Second Year Examinations. All examinations were conducted by the {\bf Bangiya Sangeet Parishad}.\\
-{\sl Other:} Soccer, squash, pencil sketching, watercolor and oil painting.
+{\sl Other:} Soccer, squash, pencil sketching, watercolor, oil painting.
 
 %\section{EXPERIENCE}
 %
